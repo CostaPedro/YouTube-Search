@@ -34,15 +34,14 @@ function displayResults(data) {
         data.items.forEach(function(searchResult){
         var title = (searchResult.snippet.channelTitle); 
         var description = (searchResult.snippet.description);
+        var videoURL =(searchResult.id.videoId);
         console.log(title);
-
+        console.log(videoURL);
        
-
-      
-      resultElement += (`<li><img class="thumb" src="${searchResult.snippet.thumbnails.default.url}">`+
-                         '<h3>' + title + '</h3>' +
-                         '<p>' + description +'</p>' + 
-                         '</li>');
+      resultElement += ( `<li><a href= "https://www.youtube.com/watch?v=${videoURL}"> <img class="thumb" src="${searchResult.snippet.thumbnails.default.url}">
+                          <h3>${title}</h3>
+                          <p>${description}</p> 
+                          </a></li>`);
 
       });
 
