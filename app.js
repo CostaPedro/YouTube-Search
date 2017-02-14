@@ -38,10 +38,10 @@ function displayResults(data) {
         console.log(title);
         console.log(videoURL);
        
-      resultElement += ( `<li><a href= "https://www.youtube.com/watch?v=${videoURL}"> <img class="thumb" src="${searchResult.snippet.thumbnails.default.url}">
+      resultElement += `<li><a href="https://www.youtube.com/watch?v=${videoURL}" target="_blank"> <img class="thumb" src="${searchResult.snippet.thumbnails.default.url}">
                           <h3>${title}</h3>
                           <p>${description}</p> 
-                          </a></li>`);
+                          </a></li>`;
 
       });
 
